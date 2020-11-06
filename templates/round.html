@@ -1,0 +1,26 @@
+{% include 'header.html' %}
+        <form method="POST" class="form-width">
+            <div class="content-card">
+                {% for card in session['first-draw'] %}
+                    <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="{{ card }}"
+                        name="{{ card }}"
+                        checked
+                    />
+                    <label class="form-check-label" for="{{ card }}">
+                        <img 
+                            class="card back" 
+                            data-card="{{card}}"
+                            data-keep=true
+                            src="{{ url_for('static',filename='cards/'+card+'.png') }}" 
+                            alt="card-back-video-poker" 
+                            onclick="clickOnCardForReverse(this)"
+                        />
+                    </label>
+                {% endfor %}
+            </div>
+            <input type="submit" value="Confirmer votre choix">
+        </form>
+{% include 'footer.html' %}

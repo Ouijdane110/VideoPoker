@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Poker Games</title>
+    <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='fav.png') }}" type="image/png" />
+</head>
+<body>
+    <div class="content-playground">
+        <img class="logo" onclick="goHomePage()" src="{{ url_for('static',filename='logopoker.png') }}" />
+        {% if session['error-form'] %}
+            <div class="message-error">{{ session["error-form"] }}</div>
+        {% endif %}
+        <form method="post">
+            <input name="pseudo" type="text" placeholder="Enter your pseudo" required>
+            <input name="wallet" type="number" value="O" placeholder="Enter an amount in your wallet" required>
+            <input name="age" type="number" value="O" min="12" max="120" placeholder="Enter your age" required>
+            <input type="submit" value="Valider">
+        </form>
+{% include 'footer.html' %}

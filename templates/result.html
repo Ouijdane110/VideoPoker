@@ -1,0 +1,17 @@
+{% include 'header.html' %}
+        {% if session["is-winner"] %}
+            <div class="message-success">{{ session["message"] }}</div>
+        {% else %}
+            <div class="message-error">{{ session["message"] }}</div>
+        {% endif %}
+        <div class="card-playground">
+            {% for card in second_draw %}
+                <img 
+                    class="card back" 
+                    data-card="{{card}}"
+                    src="{{ url_for('static',filename='cards/'+card+'.png') }}" 
+                />
+            {% endfor %}
+        </div>
+        <button onclick="restart()">Replay</button>
+{% include 'footer.html' %}

@@ -1,0 +1,16 @@
+{% include 'header.html' %}
+    {% if session["bet-to-hight"] %}
+        <div class="message-error">{{ session['bet-to-hight'] }}</div>
+    {% endif %}
+    <div class="card-playground">
+        <img class="card-img" src="{{ url_for('static',filename='cards/back.png') }}" alt="card-back-video-poker" />
+        <img class="card-img" src="{{ url_for('static',filename='cards/back.png') }}" alt="card-back-video-poker" />
+        <img class="card-img" src="{{ url_for('static',filename='cards/back.png') }}" alt="card-back-video-poker" />
+        <img class="card-img" src="{{ url_for('static',filename='cards/back.png') }}" alt="card-back-video-poker" />
+        <img class="card-img" src="{{ url_for('static',filename='cards/back.png') }}" alt="card-back-video-poker" />
+    </div>
+    <form method="POST">
+        <input name="bet" type="number" min="1" placeholder="Enter your bet">
+        <input type="submit" value="Play">
+    </form>
+{% include 'footer.html' %}

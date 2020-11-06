@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: Helvetica;
+}
+
+body{
+    width: 100%;
+    background: #403e82;
+    background-size: 50px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 50px auto 0px;
+    width: 300px;
+}
+
+button{
+    display: flex;
+    padding: 20px 0px;
+}
+
+button, input{
+    padding: 10px 20px;
+    margin: 5px 0px;
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #403e81;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+input::placeholder{
+    color: #FFFFFF;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+button, input[type=submit]{
+    transition: 0.2s;
+    margin: 20px auto 0px;
+    border: 1px solid #403e81;
+    font-size: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: #403e818f;
+}
+
+button, input[type=submit]:hover{
+    transition: 0.2s;
+    background: #403e82;
+}
+
+table{
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    background: #403e81;
+    color: white;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+table thead{
+    text-align: right;
+    font-weight: 700;
+}
+
+table thead tr{
+    height: 50px;
+    background: #282732;
+}
+
+table thead tr td{
+    padding-right: 10px;
+}
+
+table thead tr td:first-child{
+    text-align: center;
+    padding-right: 0px;
+}
+
+table tbody tr td{
+    padding: 10px 10px 0px 0px;
+    border-bottom: 1px solid #282732;
+    text-align: right;
+}
+
+table tbody tr td:first-child{
+    text-align: center;
+    padding: 10px 0px;
+}
+
+table tbody tr:last-child td{
+    border-bottom: none;
+}
+
+.logo{
+    display: flex;
+    padding-top: 20px;
+    margin: 100px auto 0px;
+    cursor: pointer;
+}
+
+.logo-game{
+    display: flex;
+    padding-top: 20px;
+    margin: 0px auto 0px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.header-playground{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto 10px;
+}
+
+.header-playground p{
+    color: #FFFFFF;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.content-playground{
+    background: #242427e0;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px 0px 50px 0px;
+}
+
+.form-width{
+    width: 100%;
+}
+
+.card-playground{
+    text-align: center;
+    padding: 50px;
+}
+
+.message-error{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 50px auto 0px;
+    filter:progid:DXImageTransform.Microsoft.Glow(Color=#ff0000,Strength=10);
+    background-color: #7c0000;
+    -webkit-box-shadow: 0px 0px 10px 0px #ff0000;
+    -moz-box-shadow: 0px 0px 10px 0px #ff0000;
+    box-shadow: 0px 0px 10px 0px #ff0000;
+}
+
+.message-success{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 50px auto 0px;
+    filter:progid:DXImageTransform.Microsoft.Glow(Color=#00ff8a,Strength=10);
+    background-color: #167c00;
+    -webkit-box-shadow: 0px 0px 10px 0px #00ff8a;
+    -moz-box-shadow: 0px 0px 10px 0px #00ff8a;
+    box-shadow: 0px 0px 10px 0px #00ff8a;
+}
+
+.card-img{
+    width: 100px;
+    height: 135px;
+    margin: 0px 5px;
+}
